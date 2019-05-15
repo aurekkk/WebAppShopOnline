@@ -1,0 +1,123 @@
+html {
+    background: white;
+}
+h3 {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    max-width: 860px;
+    min-width: 360px;
+    margin: 0px auto;
+    background: #F8F8F8;
+    padding:0px 5px;
+    text-align:center;
+}
+
+body a{
+    text-decoration: none;
+}
+
+.menu-container{
+    margin-bottom: 5px;
+}
+
+.footer-container {
+    position:absolute;
+    bottom:0;
+    width:56%;
+    height:60px;   /* Height of the footer */
+}
+
+.login-logout a{
+    text-decoration: none;
+    color: white;
+}
+
+.login-logout{
+    text-align: right;
+}
+
+.login-form{
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form label{
+    text-align: right;
+    clear: both;
+    float:left;
+    margin-right:15px;
+    width: 50%;
+}
+
+.login-form input, label{
+    display: inline-block;
+}
+
+.registration-form{
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.registration-form label{
+    text-align: right;
+    clear: both;
+    float:left;
+    margin-right:15px;
+    width: 50%;
+}
+
+.registration-form input, label{
+    display: inline-block;
+}
+
+.product-table{
+    margin-top: 5%;
+    display: inline-block;
+}
+
+.index-container ul{
+    list-style-type: none;
+    padding-left: unset;
+}
+
+.page-title  {
+    font-size:120%;
+    text-align: left;
+    margin:10px 0px;
+}
+.name {
+    font-size: 200%;
+    margin: 10px 10px 10px 0px;
+    padding: 5px;
+}
+.header-container {
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    background: cornflowerblue;
+    color: white;
+}
+.header-container .header-bar  {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}
+.header-container .header-bar  a  {
+    color: white;
+}
+
+.footer-container {
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px 0px 0px 0px;
+    border-top: 1px solid #ccc;
+}
+
