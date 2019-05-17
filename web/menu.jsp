@@ -18,21 +18,21 @@
         Product List
     </a>
     |
-    <a href="${pageContext.request.contextPath}/cart.jsp">
+    <a href="mycart">
         My Cart
     </a>
 
     <c:if test="${sessionScope.role == 'admin'}">
         |
-        <a href="${pageContext.request.contextPath}/asd.jsp">
+        <a href="${pageContext.request.contextPath}/addproduct.jsp">
             Add Product
         </a>
         |
-        <a href="${pageContext.request.contextPath}/asd.jsp">
+        <a href="${pageContext.request.contextPath}/editproduct.jsp">
             Edit Product
         </a>
         |
-        <a href="${pageContext.request.contextPath}/asd.jsp">
+        <a href="${pageContext.request.contextPath}/removeproduct.jsp">
             Remove Product
         </a>
     </c:if>

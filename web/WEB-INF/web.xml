@@ -57,4 +57,58 @@
         <servlet-name>mycart</servlet-name>
         <url-pattern>/mycart</url-pattern>
     </servlet-mapping>
+<!-- Update Quantity servlet -->
+    <servlet>
+        <servlet-name>updatequantity</servlet-name>
+        <servlet-class>controller.updatequantity</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updatequantity</servlet-name>
+        <url-pattern>/updatequantity</url-pattern>
+    </servlet-mapping>
+<!-- Remove Item servlet -->
+    <servlet>
+        <servlet-name>removeitem</servlet-name>
+        <servlet-class>controller.removeitem</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>removeitem</servlet-name>
+        <url-pattern>/removeitem</url-pattern>
+    </servlet-mapping>
+<!-- Remove Item servlet -->
+    <servlet>
+        <servlet-name>removeitemcart</servlet-name>
+        <servlet-class>controller.removeitemcart</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>removeitemcart</servlet-name>
+        <url-pattern>/removeitemcart</url-pattern>
+    </servlet-mapping>
+<!-- Add Product servlet -->
+    <servlet>
+        <servlet-name>addproduct</servlet-name>
+        <servlet-class>controller.addproduct</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addproduct</servlet-name>
+        <url-pattern>/addproduct</url-pattern>
+    </servlet-mapping>
+<!-- Edit Product servlet -->
+    <servlet>
+        <servlet-name>editproduct</servlet-name>
+        <servlet-class>controller.editproduct</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>editproduct</servlet-name>
+        <url-pattern>/editproduct</url-pattern>
+    </servlet-mapping>
+<!-- Buy Product servlet -->
+    <servlet>
+        <servlet-name>buyproducts</servlet-name>
+        <servlet-class>controller.buyproducts</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>buyproducts</servlet-name>
+        <url-pattern>/buyproducts</url-pattern>
+    </servlet-mapping>
 </web-app>

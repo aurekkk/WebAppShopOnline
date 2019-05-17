@@ -18,6 +18,10 @@ body a{
     text-decoration: none;
 }
 
+ul{
+    list-style-type: none;
+}
+
 .menu-container{
     margin-bottom: 5px;
 }
@@ -55,6 +59,86 @@ body a{
 }
 
 .login-form input, label{
+    display: inline-block;
+}
+
+.addproduct-form{
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.addproduct-form label{
+    text-align: right;
+    clear: both;
+    float:left;
+    margin-right:15px;
+    width: 50%;
+}
+
+.addproduct-form label, input{
+    display: inline-block;
+}
+
+.removeproduct-form{
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.removeproduct-form label{
+    text-align: right;
+    clear: both;
+    float:left;
+    margin-right:15px;
+    width: 50%;
+}
+
+.removeproduct-form input, label{
+    display: inline-block;
+}
+
+.editproduct-form{
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.editproduct-form label{
+    text-align: right;
+    clear: both;
+    float:left;
+    margin-right:15px;
+    width: 50%;
+}
+
+.editproduct-form input, label{
+    display: inline-block;
+}
+
+.buy-form{
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.buy-form label{
+    text-align: right;
+    clear: both;
+    float:left;
+    margin-right:15px;
+    width: 50%;
+}
+
+.buy-form input, label, p{
     display: inline-block;
 }
 

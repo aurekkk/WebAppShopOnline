@@ -15,8 +15,6 @@
     <jsp:include page="header.jsp" />
     <jsp:include page="menu.jsp"/>
 
-    <p>A mers logarea, ${username}</p>
     <p>Your role is ${role}</p>
-    <a href="index">index</a>
 </body>
 </html>

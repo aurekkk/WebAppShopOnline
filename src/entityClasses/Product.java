@@ -1,6 +1,6 @@
 package entityClasses;
 
-import com.mysql.cj.xdevapi.DbDoc;
+
 import model.DBcon;
 
 import java.sql.Connection;
@@ -14,10 +14,7 @@ public class Product {
     String name;
     double price;
     int quantity;
-
-    public String getCode() {
-        return code;
-    }
+    int buyersquantity=1;
 
     public Product(String code, String name, double price, int quantity) {
         this.code = code;
@@ -30,6 +27,17 @@ public class Product {
     public Product() {
     }
 
+    public void setBuyersquantity(int buyersquantity) {
+        this.buyersquantity = buyersquantity;
+    }
+
+    public int getBuyersquantity() {
+        return buyersquantity;
+    }
+
+    public String getCode() {
+        return code;
+    }
 
     public void setCode(String code) {
         this.code = code;
@@ -72,6 +80,31 @@ public class Product {
         return dBcon.DBProductById(code);
     }
 
+    public Product getProduct(){
+        return this;
+    }
 
+    public void addProduct(String name, String price, String quantity){
+
+        DBcon dBcon = new DBcon();
+
+        dBcon.DBAddProduct(name, price, quantity);
+
+    }
+
+    public boolean removeProduct(String code){
+        DBcon dBcon = new DBcon();
+        return dBcon.DBRemoveProduct(code);
+    }
+
+    public boolean editProduct(String code, String name, String price, String quantity){
+        DBcon dBcon = new DBcon();
+        return dBcon.DBEditProduct(code, name, price, quantity);
+    }
+
+    public void modifyQuantity(Product p){
+        DBcon dBcon = new DBcon();
+        dBcon.DBModifyQuanitity(p);
+    }
 
 }

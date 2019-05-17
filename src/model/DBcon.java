@@ -163,9 +163,106 @@ public class DBcon {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
         }
 
         return product;
+    }
+
+    public void DBAddProduct(String name, String price, String quantity){
+        Connection connection = null;
+        PreparedStatement statement = null;
+        try{
+            connection = getConnection();
+            statement = connection.prepareStatement("insert into products (code, name, price, quantity) values (default, ?, ?, ?)");
+            statement.setString(1, name);
+            statement.setDouble(2, Double.parseDouble(price));
+            statement.setInt(3, Integer.parseInt(quantity));
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public boolean DBRemoveProduct(String code){
+        int action = 0;
+        Connection connection = null;
+        PreparedStatement statement = null;
+        try{
+            connection = getConnection();
+            statement = connection.prepareStatement("delete from products where code = ?");
+            statement.setInt(1, Integer.parseInt(code));
+            action = statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            try{
+                if(connection!=null){
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(action > 0) return true;
+        return false;
+    }
+
+    public boolean DBEditProduct(String code, String name, String price, String quantity){
+        int action = 0;
+        Connection connection = null;
+        PreparedStatement statement = null;
+        try{
+            connection = getConnection();
+            statement = connection.prepareStatement("update products set name = ?, price = ?, quantity = ?" +
+                                                        " where code = ?");
+            statement.setString(1, name);
+            statement.setDouble(2, Double.parseDouble(price));
+            statement.setInt(3, Integer.parseInt(quantity));
+            statement.setInt(4, Integer.parseInt(code));
+            action = statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            try{
+                if(connection != null){
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(action > 0)return true;
+        return false;
+    }
+
+    public void DBModifyQuanitity(Product p){
+        Connection connection = null;
+        PreparedStatement statement = null;
+        try{
+            connection = getConnection();
+            statement = connection.prepareStatement("update products set quantity = ? where code = ?");
+            statement.setInt(1, p.getQuantity() -  p.getBuyersquantity());
+            statement.setInt(2, Integer.parseInt(p.getCode()));
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 }

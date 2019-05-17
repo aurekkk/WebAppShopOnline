@@ -20,7 +20,7 @@ public class productlist extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Product product = new Product();
-        HttpSession session = request.getSession(false);
+        HttpSession session = request.getSession(true);
         List<Product> products = product.listOfProduct();
         if (products != null){
             request.setAttribute("products", products);

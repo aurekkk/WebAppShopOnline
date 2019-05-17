@@ -24,7 +24,7 @@
 
         <c:choose>
             <c:when test="${sessionScope.user != null}">
-                <p>Hello, ${user}</p>
+                <p>Hello, ${user}</p><br>
                 <a href="logout">Logout</a>
             </c:when>
 
